@@ -1,0 +1,31 @@
+# Example configuration with screen sharing
+
+# Screen sharing settings
+enable_screen_share = true  # Enable screen sharing KVM mode
+screen_share_fps = 30         # Frame rate: 15-60 fps (default: 30)
+screen_share_quality = 80      # Quality: 1-100 (default: 80)
+
+# Release bind to return control to host
+release_bind = [ "KeyA", "KeyS", "KeyD", "KeyF" ]
+
+# Port for communication
+port = 4242
+
+# List of authorized TLS certificate fingerprints
+[authorized_fingerprints]
+"bc:05:ab:7a:a4:de:88:8c:2f:92:ac:bc:b8:49:b8:24:0d:44:b3:e6:a4:ef:d7:0b:6c:69:6d:77:53:0b:14:80" = "workstation-pc"
+"aa:bb:cc:dd:ee:ff:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff:00" = "laptop"
+
+# Define clients (computers you want to control/view)
+[[clients]]
+# Client on the right side
+position = "right"
+hostname = "workstation-pc"
+activate_on_startup = true
+ips = ["192.168.1.100"]
+
+[[clients]]
+# Client on the left side
+position = "left"
+hostname = "laptop"
+ips = ["192.168.1.101", "192.168.1.102"]
