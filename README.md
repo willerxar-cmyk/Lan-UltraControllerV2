@@ -1,4 +1,16 @@
 # Lan Mouse
+## Fork / Attribution
+This repository is a derivative work based on the original Lan Mouse project:
+https://github.com/feschber/lan-mouse
+
+Original project copyright belongs to its respective authors and contributors.
+This derivative work remains licensed under GPL-3.0-or-later (see [LICENSE](./LICENSE)).
+
+Notable changes in this repository may include:
+- Experimental screen sharing / KVM-style extensions: [SCREEN_SHARE.md](./SCREEN_SHARE.md)
+- Additional crate(s) such as `screen-share` (feature-gated via `screen_share`)
+- Extra documentation in Portuguese for the changes
+
 Lan Mouse is a *cross-platform* mouse and keyboard sharing software similar to universal-control on Apple devices.
 It allows for using multiple PCs via a single set of mouse and keyboard.
 This is also known as a Software KVM switch.
